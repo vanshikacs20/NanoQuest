@@ -2,7 +2,8 @@
 import streamlit as st
 import pandas as pd
 from pathlib import Path 
-data_file = Path("data") / "Table S1.xlsx"
+BASE_DIR = Path(__file__).resolve().parent
+data_file = BASE_DIR / "data" / "Table S1.xlsx"
 df = pd.read_excel(data_file)
 st.set_page_config(
     page_title="NanoQuest",
